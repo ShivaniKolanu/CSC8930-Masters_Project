@@ -439,22 +439,8 @@ def recognizer_deep_learning(id, count):
             predicted_id = np.argmax(prediction)
             print(f"predicted_id is {predicted_id}")
             total_predictions += 1
-            #change
-            if id == 3:
-                recognized = True
-                correct_predictions += 1
-                cv2.putText(frame, "Recognized", (x, y-40), cv2.FONT_HERSHEY_SIMPLEX, 1, (50, 255, 50), 2)
-                cv2.rectangle(frame, (x, y), (x+w, y+h), (50, 255, 50), 2)
-            elif id == 0:
-                recognized = False
-                cv2.putText(frame, "Unknown", (x, y-40), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
-                cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
-            elif id == 4:
-                recognized = False
-                cv2.putText(frame, "Unknown", (x, y-40), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
-                cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
-
-            elif predicted_id == id:
+        
+            if predicted_id == id:
                 recognized = True
                 correct_predictions += 1
                 cv2.putText(frame, "Recognized", (x, y-40), cv2.FONT_HERSHEY_SIMPLEX, 1, (50, 255, 50), 2)
@@ -463,16 +449,6 @@ def recognizer_deep_learning(id, count):
                 recognized = False
                 cv2.putText(frame, "Unknown", (x, y-40), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
                 cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
-
-            # if predicted_id == id:
-            #     recognized = True
-            #     correct_predictions += 1
-            #     cv2.putText(frame, "Recognized", (x, y-40), cv2.FONT_HERSHEY_SIMPLEX, 1, (50, 255, 50), 2)
-            #     cv2.rectangle(frame, (x, y), (x+w, y+h), (50, 255, 50), 2)
-            # else:
-            #     recognized = False
-            #     cv2.putText(frame, "Unknown", (x, y-40), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
-            #     cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
         
         cv2.namedWindow("Frame", cv2.WINDOW_NORMAL)
         cv2.setWindowProperty("Frame", cv2.WND_PROP_TOPMOST, 1)
