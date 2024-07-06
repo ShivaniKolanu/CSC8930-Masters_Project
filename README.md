@@ -10,5 +10,10 @@
 
 ### ✨ Proposed System ✨
 
-![alt text](https://github.com/[ShivaniKolanu]/[CSC8930-Masters_Project]/blob/[main]/image.jpg?raw=true)
+<img width="800" alt="image" src="https://github.com/ShivaniKolanu/CSC8930-Masters_Project/assets/48211558/faa534f6-cfbc-4161-b5b4-38c701739ce4">
 
+
+### ✨ Backend -- E-R Diagram of the Database ✨
+
+
+![image](https://github.com/ShivaniKolanu/CSC8930-Masters_Project/assets/48211558/e3e6add9-a201-4628-8862-71bf10804f17)
